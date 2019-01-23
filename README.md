@@ -10,7 +10,7 @@ The only 2 arguments in the command line are the perl script and the main file t
 All scripts and configuration files must be present in the same working directory
 
 ### Step 1 : sam2clip.pl
-Command line  : perl sam2clip.pl SAM file  
+Command line  : `perl sam2clip.pl SAM_file`  
 Input : SAM file from bowtie2 analysis  
 Output : clip data file (TSV format [see description below],T0_sam2clip_chr01.tsv is provided as an example), SAM file and FASTA file describing the clipped reads  
 Note : the SAM output is not used in next step but may be useful after step 2 for visual inspection of the insertions in IGV or similar genome browser
