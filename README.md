@@ -22,18 +22,18 @@ The 12 columns clip data file contains :
 - col 5 : code describing the alignment (see below)) 
 - col 6 : number of clipped nucleotides
 - col 7-11 : data describing the alignment of the second mate as above
-- col 12 : description of the aligned pair (eg : "clip_conc" means : concordant alignment, at least one mate clipped)  
+- col 12 : description of the aligned pair (eg : "clip_conc" means : concordant alignment, at least one mate clipped)
 Code describing the alignements (col 5 and 10) : eg, SM2+ means that the left part of the read is soft-clipped (S), the right part is aligned (M for Match), the read is number 2 in the initial pair and the read is aligned into its initial orientation (+). UN means unclipped.
 
 ### Step 2 : clip2ins.pl
-Command line : clip2ins.pl clip data file  
+Command line : `clip2ins.pl clip_data_file`  
 Input : clip data file from step 1  
 Output : BED file describing the insertions (T0_clip2ins.bed is provided as an example)  
 Additional necessary software : BLAST, BEDTOOLS  
 Additional necessary data : nls.bed (see below), TE database in FASTA format, FASTA file from step 1
  
 ### Optional step : selfclips.pl
-Command line : perl selfclips.pl clip data file  
+Command line : `perl selfclips.pl clip_data_file`  
 Input : clip data file from step 1  
-Output : BED file describing the false positive breakpoints (nls.bed)  
+Output : BED file listing the false positive breakpoints (nls.bed)  
 Note : A nls.bed file is necessary for clip2ins.pl to work but this step is optional because a nls.bed file is provided
