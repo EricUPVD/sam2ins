@@ -3,10 +3,14 @@
 Perl scripts to uncover transposable elements insertions from SAM output
 
 ### General guidelines
-The starting point is a SAM file produced by bowtie2. This SAM file must contain a header and must be sorted by queryname.
+The starting point is a SAM file produced by bowtie2. This SAM file must contain a header and must be sorted by queryname
+
 Each perl script (name.pl) is provided with its companion configuration file (name.conf)
+
 The configuration files contain all the parameters (default parameters are indicated, specific ones should be added) not indicated in the command line for the corresponding script to work
+
 The only 2 arguments in the command line are the perl script and the main file to parse
+
 All scripts and configuration files must be present in the same working directory
 
 ### Step 1 : sam2clip.pl
