@@ -1,6 +1,4 @@
 # sam2ins
-Author : Eric Lasserre (eric.lasserre@univ-perp.fr)
-Last version of this file : 01/22/2019
 
 Perl scripts to uncover transposable elements insertions from SAM output
 
