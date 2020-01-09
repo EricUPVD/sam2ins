@@ -19,10 +19,11 @@ The 12 columns clip data file contains :
 - col 1 : name of the read pair
 - col 2-6 : data describing the alignment of the first mate as follows :
     - col 2,3,4 : coordinates of the alignment on the chromosomes
-    - col 5 : code describing the alignment (see below)) 
+    - col 5 : code describing the alignment (see below) 
     - col 6 : number of clipped nucleotides
 - col 7-11 : data describing the alignment of the second mate as above
 - col 12 : description of the aligned pair (eg : "clip_conc" means : concordant alignment, at least one mate clipped)
+
 Code describing the alignements (col 5 and 10) : eg, SM2+ means that the left part of the read is soft-clipped (S), the right part is aligned (M for Match), the read is number 2 in the initial pair and the read is aligned into its initial orientation (+). UN means unclipped.
 
 ### Step 2 : clip2ins.pl
