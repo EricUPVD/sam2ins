@@ -16,9 +16,9 @@ Command line  : `perl sam2clip.pl SAM_file`
 - Note : the SAM output is not used in next step but may be useful after step 2 for visual inspection of the insertions in IGV or similar genome browser
 
 The 12 columns clip data file contains :
-- col 1 : name of the read pair
+* col 1 : name of the read pair
 - col 2-6 : data describing the alignment of the first mate as follows :
--- col 2,3,4 : coordinates of the alignment on the chromosomes
+- col 2,3,4 : coordinates of the alignment on the chromosomes
 - col 5 : code describing the alignment (see below)) 
 - col 6 : number of clipped nucleotides
 - col 7-11 : data describing the alignment of the second mate as above
