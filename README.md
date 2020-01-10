@@ -14,7 +14,7 @@ Command line  : `perl sam2clip.pl SAM_file`
 - Input : SAM file from bowtie2 analysis
 - Parameters and options : sam2clip.conf file to be completed
 - Output : clip-data file (TSV format [see description below],T0_sam2clip_chr01.tsv is provided as an example), SAM file and FASTA file describing the clipped reads  
-- Note : the SAM output is not used in next step but may be useful after step 2 for visual inspection of the insertions in IGV or similar genome browser
+> Note : the SAM output is not used in next step but may be useful after step 2 for visual inspection of the insertions in IGV or similar genome browser
 
 The 12 columns clip-data file contains :
 - col 1 : name of the read pair
@@ -42,4 +42,4 @@ Command line : `clip2ins.pl clip_data_file`
 Command line : `perl selfclips.pl clip_data_file`  
 - Input : clip-data file from step 1  
 - Output : BED file listing the false positive breakpoints (nls.bed)  
-- Note : A nls.bed file is necessary for clip2ins.pl to work but this step is optional because a nls.bed file is provided
+> Note : A nls.bed file is necessary for clip2ins.pl to work but this step is optional because a nls.bed file is provided
