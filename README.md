@@ -5,12 +5,12 @@ Perl scripts to uncover transposable elements insertions from SAM output.
 ### General guidelines
 The starting point is a SAM file produced by bowtie2. This SAM file must contain a header and must be sorted by queryname.  
 Each perl script (name.pl) is provided with its companion configuration file (name.conf).  
-The configuration files contain all the parameters (default parameters are indicated, specific ones should be added) not indicated in the command line for the corresponding script to work.  
-The only 2 arguments in the command line are the perl script and the main file to parse.  
+The configuration files contain all the parameters and options (default parameters are indicated, specific ones should be added) for the corresponding script to work.  
+The only argument in the command line is the name of the file to parse.  
 All scripts and configuration files must be present in the same working directory.
 
 ### Step 1 : sam2clip.pl
-Command line  : `perl sam2clip.pl SAM_file`  
+Command line  : `sam2clip.pl SAM_file`  
 - Input : SAM file from bowtie2 analysis
 - Parameters and options : sam2clip.conf file to be completed
 - Output : clip-data file (TSV format [see description below],T0_sam2clip_chr01.tsv is provided as an example), SAM file and FASTA file describing the clipped reads  
@@ -39,7 +39,7 @@ Command line : `clip2ins.pl clip_data_file`
 - Additional necessary data : nls.bed (see below), TE database in FASTA format, FASTA file from step 1
  
 ### Optional step : selfclips.pl
-Command line : `perl selfclips.pl clip_data_file`  
+Command line : `selfclips.pl clip_data_file`  
 - Input : clip-data file from step 1  
 - Output : BED file listing the false positive breakpoints (nls.bed)  
 > Note : A nls.bed file is necessary for clip2ins.pl to work but this step is optional because a nls.bed file is provided
