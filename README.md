@@ -11,7 +11,8 @@ All scripts and configuration files must be present in the same working director
 
 ### Step 1 : sam2clip.pl
 Command line  : `perl sam2clip.pl SAM_file`  
-- Input : SAM file from bowtie2 analysis  
+- Input : SAM file from bowtie2 analysis
+- Parameters and options : sam2clip.conf file to be completed
 - Output : clip-data file (TSV format [see description below],T0_sam2clip_chr01.tsv is provided as an example), SAM file and FASTA file describing the clipped reads  
 - Note : the SAM output is not used in next step but may be useful after step 2 for visual inspection of the insertions in IGV or similar genome browser
 
@@ -31,7 +32,8 @@ Code describing the alignements (col 5 and 10) : eg, SM2+ means that the left pa
 
 ### Step 2 : clip2ins.pl
 Command line : `clip2ins.pl clip_data_file`  
-- Input : clip-data file from step 1  
+- Input : clip-data file from step 1
+- Parameters and options : clip2ins.conf file to be completed
 - Output : BED file describing the insertions (T0_clip2ins.bed is provided as an example)  
 - Additional necessary software : BLAST, BEDTOOLS  
 - Additional necessary data : nls.bed (see below), TE database in FASTA format, FASTA file from step 1
