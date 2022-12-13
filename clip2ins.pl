@@ -11,7 +11,7 @@ my $outname = $1;
 
 #getting the data from the configuration file
 my $read_length;
-my $max_for_conc;           # max size for an alignment to be considered as concordant (inherited from clippedReads.pl)
+my $max_for_conc;           # max size for an alignment to be considered as concordant (inherited from sam2clip.pl)
 my $tsd_min;                # minimum size of the tsd
 my $tsd_max;                # maximum size of the tsd
 my $dist_from_bp;           # maximum distance from the bp for unclip_disc mates
